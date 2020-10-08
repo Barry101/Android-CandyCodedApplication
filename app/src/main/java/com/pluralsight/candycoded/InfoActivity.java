@@ -23,6 +23,13 @@ public class InfoActivity extends AppCompatActivity {
 
     }
 
+    public void createPhoneIntent(View view){
+        Uri telephone= Uri.parse("tel:0123456789");
+        Intent dial= new Intent(Intent.ACTION_DIAL);
+        dial.setData(telephone);
+        startActivity(dial);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
